@@ -1,8 +1,10 @@
-﻿namespace BlazorAppBlog1.Server
+﻿using System;
+
+namespace BlazorAppBlog1.Shared
 {
     public class BlogPost
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public string Description { get; set; } 

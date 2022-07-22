@@ -1,6 +1,8 @@
 ﻿<!-- importing the class in orther to get varibales -->
 @using BlazorAppBlog1.Shared
 @using BlazorAppBlog1.Client
+@inject BlazorAppBlog1.Client.Services.IBlogService BlogService
+
 
 @foreach (var post in Posts)
 {
@@ -15,10 +17,13 @@
 }
 
 @code {
-    public List<BlogPost> Posts { get; set; } = new List<BlogPost>() {
-        new BlogPost { Title = "stuff about blazor", Description= "This is ...text"},
-        new BlogPost { Title ="More stuff about Blazor", Description ="hi, this is a blogpost"}
-    };
+    private List<BlogPost> Post = new List<BlogPost>();
+
+    protected override void OnInitialized()
+    {
+        Posts = BlogService.GetBlogPosts();
+    }
+
 }
 
 

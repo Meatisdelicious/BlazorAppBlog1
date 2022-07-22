@@ -1,5 +1,6 @@
 ﻿using BlazorAppBlog1.Shared;
 
+
 namespace BlazorAppBlog1.Client.Services
 {
     public interface IBlogService

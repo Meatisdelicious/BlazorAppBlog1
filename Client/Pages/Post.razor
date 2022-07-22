@@ -1,0 +1,18 @@
+﻿@page "/posts/{url}"
+@inject BlazorAppBlog1.Client.Services.IBlogService BlogService
+
+
+<h3>@post.Title</h3>
+
+@code {
+    private BlazorAppBlog1.Shared.BlogPost post;
+
+    [Parameter]
+    public string Url { get; set; }
+
+    protected override void OnInitialized()
+    {
+        post = BlogService.GetBlogPostByUrl(Url);
+    }
+
+}

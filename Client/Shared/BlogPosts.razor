@@ -4,9 +4,9 @@
 
 @foreach (var post in Posts)
 {
-    <div styles="margin: 20px;">
+    <div style="margin: 20px;">
         <div>
-            @post.Title
+            <h4>@post.Title</h4>
         </div>
         <div>
             @post.Description
@@ -16,7 +16,10 @@
 
 @code {
     public List<BlogPost> Posts { get; set; } = new List<BlogPost>() {
-        new BlogPost { Title = " stuff about blaozor", Description= "This is ...text"},
-        new BlogPost { Title =" a first blog post", Description ="hi, this is a blogpost"}
+        new BlogPost { Title = "stuff about blazor", Description= "This is ...text"},
+        new BlogPost { Title ="More stuff about Blazor", Description ="hi, this is a blogpost"}
     };
 }
+
+
+

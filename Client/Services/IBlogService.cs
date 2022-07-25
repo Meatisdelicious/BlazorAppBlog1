@@ -1,11 +1,12 @@
 ﻿using BlazorAppBlog1.Shared;
+using System.Threading.Tasks;
 
 
 namespace BlazorAppBlog1.Client.Services
 {
-    public interface IBlogService
+    interface IBlogService
     {
-        List<BlogPost> GetBlogPosts();
-        BlogPost GetBlogPostByUrl(string url);
+        Task<List<BlogPost>> GetBlogPosts();
+        Task<BlogPost> GetBlogPostByUrl(string url);
     }
 }

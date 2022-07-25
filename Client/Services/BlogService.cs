@@ -4,12 +4,6 @@ namespace BlazorAppBlog1.Client.Services
 {
     public class BlogService : IBlogService
     {
-        public List<BlogPost> Posts { get; set; } = new List<BlogPost>() 
-         {
-        new BlogPost { Url="new-tutorial", Title = "stuff about blazor", Description= "This is ...text", Content="iaondazincoarcoaeca aoziucnazc azoecnazep caecapez caozuepazpicuzan cazeacnpzejiapozeuncpaziecjeluuezpzae  aeuc azecazijcamzeice"},
-        new BlogPost { Url="first-post", Title ="More stuff about Blazor", Description ="hi, this is a blogpost", Content=" cziacnzaoircnozae ozaeicazpoicnazoiec azoeic azeoic azire,cpoazicnazirnvpaozekcciznaozricnzapocnairjvn aerk, âir îzaecarznaoicnezoiazc azoicnaôrienc^zaeinmirnvnpzaocnazisinvir,zzaifroza,cirea"}
-        };
-
         public BlogPost GetBlogPostByUrl(string url)
         {
         

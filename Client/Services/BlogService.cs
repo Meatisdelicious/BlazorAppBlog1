@@ -12,7 +12,8 @@ namespace BlazorAppBlog1.Client.Services
 
         public BlogPost GetBlogPostByUrl(string url)
         {
-            throw new NotImplementedException();
+        
+            return Posts.FirstOrDefault(p=>p.Url.ToLower().Equals(url.ToLower()));
         }
 
         public List<BlogPost> GetBlogPosts()
